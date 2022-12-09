@@ -1,0 +1,7 @@
+default:
+  suites:
+    default:
+      paths:
+        - ./tests/Features
+      contexts:
+        - Starter\Kit\Tests\Features\NewTradeContext

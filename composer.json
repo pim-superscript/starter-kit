@@ -1,0 +1,30 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Starter\\Kit\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Starter\\Kit\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "behat/behat": "^3.12",
+        "infection/infection": "^0.26.16"
+    },
+    "scripts": {
+        "tests-features": "vendor/bin/behat --config behat.yml",
+        "tests-unit": "vendor/bin/phpunit tests/unit --testdox",
+        "tests-mutation": "vendor/bin/infection"
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
+    }
+}
